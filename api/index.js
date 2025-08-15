@@ -20,10 +20,32 @@ const monstros = require('./monstros.json');
 // Rota GET para listar todos os monstros
 // Quando alguém fizer uma requisição GET para a URL base + '/monstros'
 // (ex: http://localhost:3000/monstros), esta função será executada.
-app.get('/monstros', (req, res) => {
     // Retorna a array de monstros como uma resposta JSON
-    res.json(monstros);
-});
+app.get('/monstros', (req, res)) => {
+    const tipoCriatura = req.query.tipo_criatura;
+    const pontosVidaMin = req.query.pontos_vida_min;
+    const pontosVidaMax = req.query.pontos_vida_max;
+    const buscaTexto = req.query.busca_texto;
+
+    let resultado = monstros;
+
+    if (tipoCriatura) {
+        resultado = resultado.filter(m => m.tipo_criatura = tipoCriatura);
+    }
+     (pontosVidaMin) {
+        resultado = resultado.filter (m => m.pontos_vida < Number (pontosVidaMin));
+    }
+    if (pontosVidaMax) {
+        resultado = resultado.filter (m => m.pontos_vida > Number (pontosVidaMax));
+    }
+    elif (buscaTexto) {
+        const texto = buscaTexto.toLowerCase ( )
+        resultado = resultado.filter
+        (m.nome && m.nome.toLowerCase () .includes (texto)) 
+        (m.descricao && m.descricao.toLowerCase () .includes (texto))
+    }
+    res.json(resultado)
+}
 
 
 //GRUPO SCP
@@ -46,3 +68,4 @@ app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
     console.log(`Acesse: http://localhost:${PORT}/monstros`);
 });
+
