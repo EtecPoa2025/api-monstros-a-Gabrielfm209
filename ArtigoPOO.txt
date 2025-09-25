@@ -1,0 +1,10 @@
+1. O Coração da POO: Classes, Atributos e Métodos
+No coração da POO estão os três conceitos chave:
+
+Classes: Uma classe é como uma planta de uma casa. Ela define a estrutura e o comportamento que os objetos terão. Um exemplo pode sera a classe Carro pode definir que todo carro tem uma cor, uma marca, um modelo entre outros atributos.
+
+Atributos: São as características, de um objeto. Usando a classe Carro de exmplo, os atributos seriam a cor, marca e modelo. Para um objeto como o carro, esses atributos teriam valores tipo preto, McLaren e McLaren Senna.
+
+Métodos: Já os metodos são as ações ou comportamentos que um objeto realiza. Para a classe Carro, os métodos poderiam ser acelerar, frear ou ligar o carro.
+
+Pensando de uma forma bem simples, a classe é como uma receita de bolo, os atributos são os ingredientes, os métodos são as ações que você faz com os ingredientes. E umm bolo pronto seria o objeto
