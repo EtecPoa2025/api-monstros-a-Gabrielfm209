@@ -1,0 +1,31 @@
+O que é uma API?
+Uma API permite que os programas se comuniquem entre si de forma simples e organizada, trocando informações e solicitando açõws um dos outros.
+Onde APIs são utilizadas hoje?
+As APIs são utilizadas em todos tipos de aplicativos e programas que utilizamos no dia a dia pois sem elas nao tem a comunicaçao entre sistemas. Um exemplo seria quando voce vai fazer o login numa rede social uma Api verifica a sua identidade pra poder entrar voce poder entar no aplicativo.
+Como criar uma API usando ExpressJS
+Primeiro se instala o node.js e o npm no computador, após isso você inica o npm que irá criar o arqiuvo json, depois instalar o express, após isso criar o arquivo js configurar o codigo criar caminhos (URL) e executar o código no navegador ou postman.
+
+Exemplo:
+
+const express = require('express');
+const app = expres();
+const porta = 3000;
+
+const tarefas = [
+  { id: 1, descricao: 'Fazer o cafe', feita: false },
+  { id: 2, descricao: 'Arrumar a Casa', feita: true },
+  { id: 3, descricao: 'EStudar', feita: false },
+  { id: 4, descricao: 'Lavar a Louça', feita: true };
+
+app.get('/tarefas', (req, res) => {
+  return res.json(tarefas);
+});
+
+app.listen(porta, () => {
+  console.log('servidor funcionando http://localhost:${porta}');
+);
+Rode no seu computador e mostre prints da API funcionando
+Não funcionou.
+
+No final, com suas palavras faça uma conclusão sobre o tema. Comente sobre seu aprendizado, se teve alguma dificuldade e quais são os seus próximos passos na aprendizagem sobre API.
+API é um tema muito importante de ser estudado pois está interligando sistemas e programas em praticamnete tudo que usamos. Eu acredito que consigui aprender sobre o conceito de api mesmo com algumas dificuldades em relaçao a usar o terminal. Acredito que os proximos passos serão em relaçao a banco de dados e aprender sobre outras coisas sobre as funcionalidades da API
